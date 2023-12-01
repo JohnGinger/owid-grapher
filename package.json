@@ -30,6 +30,7 @@
         "revertLastDbMigration": "yarn typeorm migration:revert -d itsJustJavascript/db/dataSource.js",
         "runPostUpdateHook": "node --enable-source-maps ./itsJustJavascript/baker/postUpdatedHook.js",
         "startAdminServer": "node --enable-source-maps ./itsJustJavascript/adminSiteServer/app.js",
+        "startLocalCloudflareFunctions": "wrangler pages dev localBake --compatibility-date 2023-10-09",
         "startDeployQueueServer": "node --enable-source-maps ./itsJustJavascript/baker/startDeployQueueServer.js",
         "startLernaWatcher": "lerna watch --scope '@ourworldindata/*' -- lerna run build --scope=\\$LERNA_PACKAGE_NAME --include-dependents",
         "startTmuxServer": "node_modules/tmex/tmex dev \"yarn startTscServer\" \"yarn startLernaWatcher\" \"yarn startAdminServer\" \"yarn startViteServer\"",
@@ -251,7 +252,8 @@
         "tsc-watch": "^6.0.4",
         "vite": "^4.4.10",
         "vite-plugin-checker": "^0.6.2",
-        "vite-plugin-warmup": "^0.1.0"
+        "vite-plugin-warmup": "^0.1.0",
+        "wrangler": "^3.18.0"
     },
     "prettier": {
         "trailingComma": "es5",
