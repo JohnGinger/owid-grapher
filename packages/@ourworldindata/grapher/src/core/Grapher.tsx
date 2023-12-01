@@ -778,6 +778,8 @@ export class Grapher
         return this.tableAfterAllTransformsAndFilters
     }
 
+    @observable.ref renderToStatic = false
+
     @observable.ref isExportingToSvgOrPng = false
     @observable.ref exportFormat = GrapherExportFormat.landscape
 
@@ -1742,7 +1744,7 @@ export class Grapher
     }
 
     @computed get disableIntroAnimation(): boolean {
-        return this.isExportingToSvgOrPng
+        return this.isExportingToSvgOrPng || this.renderToStatic
     }
 
     @computed get mapConfig(): MapConfig {
@@ -2491,6 +2493,9 @@ export class Grapher
 
     private renderReady(): JSX.Element | null {
         if (!this.hasBeenVisible) return null
+        if (this.renderToStatic) {
+            return <StaticCaptionedChart manager={this} />
+        }
         return (
             <>
                 <CaptionedChart manager={this} />
