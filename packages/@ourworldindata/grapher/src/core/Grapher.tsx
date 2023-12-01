@@ -1105,10 +1105,6 @@ export class Grapher
         this.disposers.forEach((dispose) => dispose())
     }
 
-    @computed get fontSize(): number {
-        return this.baseFontSize
-    }
-
     // todo: can we remove this?
     // I believe these states can only occur during editing.
     @action.bound private ensureValidConfigWhenEditing(): void {
@@ -2535,8 +2531,11 @@ export class Grapher
     }
 
     @action.bound private setBaseFontSize(): void {
-        this.baseFontSize =
-            this.props.baseFontSize ?? this.computeBaseFontSize()
+        this.baseFontSize = this.computeBaseFontSize()
+    }
+
+    @computed get fontSize(): number {
+        return this.props.baseFontSize ?? this.baseFontSize
     }
 
     // when optimized for horizontal screen, grapher bleeds onto the edges horizontally
