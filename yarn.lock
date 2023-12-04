@@ -3648,6 +3648,7 @@ __metadata:
     d3: "npm:^6.1.1"
     decko: "npm:^1.2.0"
     enzyme: "npm:^3.11.0"
+    esbuild: "npm:^0.18.20"
     esbuild-sass-plugin: "npm:^2.16.0"
     eslint: "npm:^8.53.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
@@ -8982,7 +8983,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.18.10, esbuild@npm:^0.18.2":
+"esbuild@npm:^0.18.10, esbuild@npm:^0.18.2, esbuild@npm:^0.18.20":
   version: 0.18.20
   resolution: "esbuild@npm:0.18.20"
   dependencies:
