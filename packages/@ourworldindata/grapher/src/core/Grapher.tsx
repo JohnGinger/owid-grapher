@@ -1722,6 +1722,8 @@ export class Grapher
             case GrapherStaticFormat.landscape:
                 return this.idealBounds
             case GrapherStaticFormat.portrait:
+                return new Bounds(0, 0, 600, 600)
+            case GrapherStaticFormat.instagram:
                 return new Bounds(0, 0, 1080, 1080)
             default:
                 return this.idealBounds

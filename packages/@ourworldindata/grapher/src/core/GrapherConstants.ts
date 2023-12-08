@@ -93,6 +93,7 @@ export enum GrapherTabOption {
 export enum GrapherStaticFormat {
     landscape = "landscape",
     portrait = "portrait",
+    instagram = "instagram",
 }
 
 export enum ScaleType {
