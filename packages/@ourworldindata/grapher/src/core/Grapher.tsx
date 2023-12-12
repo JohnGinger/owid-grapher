@@ -1740,8 +1740,8 @@ export class Grapher
         return this._staticFormat
     }
 
-    set staticFormat(preset: GrapherStaticFormat) {
-        this._staticFormat = preset
+    set staticFormat(format: GrapherStaticFormat) {
+        this._staticFormat = format
     }
 
     @computed get staticBounds(): Bounds {
