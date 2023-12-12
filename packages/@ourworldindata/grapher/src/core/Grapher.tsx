@@ -803,6 +803,10 @@ export class Grapher
     @observable.ref isDownloadModalOpen = false
     @observable.ref isEmbedModalOpen = false
 
+    @computed private get isStatic(): boolean {
+        return this.renderToStatic || this.isExportingToSvgOrPng
+    }
+
     private get isStaging(): boolean {
         if (typeof location === undefined) return false
         return location.host.includes("staging")
@@ -1793,7 +1797,7 @@ export class Grapher
     }
 
     @computed get disableIntroAnimation(): boolean {
-        return this.isExportingToSvgOrPng || this.renderToStatic
+        return this.isStatic
     }
 
     @computed get mapConfig(): MapConfig {
@@ -2493,6 +2497,7 @@ export class Grapher
         const containerClasses = classnames({
             GrapherComponent: true,
             GrapherPortraitClass: this.isPortrait,
+            isStatic: this.isStatic,
             isExportingToSvgOrPng: this.isExportingToSvgOrPng,
             optimizeForHorizontalSpace: this.optimizeForHorizontalSpace,
             GrapherComponentNarrow: this.isNarrow,
