@@ -1268,9 +1268,9 @@ export class Grapher
             }
 
             // can't use the computed property here because Grapher might not currently be in static mode
-            const baseFontSize = this.computeBaseFontSizeFromHeight(
-                this.staticBounds
-            )
+            const baseFontSize = this.areStaticBoundsSmall
+                ? this.computeBaseFontSizeFromHeight(this.staticBounds)
+                : 18
 
             return new MarkdownTextWrap({
                 text,
@@ -2668,6 +2668,10 @@ export class Grapher
 
     @computed get isStaticAndSmall(): boolean {
         if (!this.isStatic) return false
+        return this.areStaticBoundsSmall
+    }
+
+    @computed get areStaticBoundsSmall(): boolean {
         const { idealBounds, staticBounds } = this
         const idealPixelCount = idealBounds.width * idealBounds.height
         const staticPixelCount = staticBounds.width * staticBounds.height
