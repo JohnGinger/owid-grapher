@@ -1278,7 +1278,7 @@ export class Grapher
     }
 
     @computed get currentTitle(): string {
-        let text = this.displayTitle.trim()
+        let text = "test " + this.displayTitle.trim()
         const selectedEntityNames = this.selection.selectedEntityNames
         const showEntityAnnotation = !this.hideAnnotationFieldsInTitle?.entity
         const showTimeAnnotation = !this.hideAnnotationFieldsInTitle?.time
