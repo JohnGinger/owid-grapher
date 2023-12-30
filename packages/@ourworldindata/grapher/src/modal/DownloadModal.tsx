@@ -16,10 +16,10 @@ import {
 import { LoadingIndicator } from "../loadingIndicator/LoadingIndicator"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome/index.js"
 import { faDownload, faInfoCircle } from "@fortawesome/free-solid-svg-icons"
+import { OwidColumnDef } from "@ourworldindata/types"
 import {
     BlankOwidTable,
     OwidTable,
-    OwidColumnDef,
     CoreColumn,
 } from "@ourworldindata/core-table"
 import { STATIC_EXPORT_DETAIL_SPACING } from "../core/GrapherConstants"

@@ -19,14 +19,12 @@ import {
     SortConfig,
     SortOrder,
     getRelativeMouse,
+    ColorSchemeName,
+    EntitySelectionMode,
 } from "@ourworldindata/utils"
 import { action, computed, observable } from "mobx"
 import { observer } from "mobx-react"
-import {
-    BASE_FONT_SIZE,
-    EntitySelectionMode,
-    Patterns,
-} from "../core/GrapherConstants"
+import { BASE_FONT_SIZE, Patterns } from "../core/GrapherConstants"
 import { DualAxisComponent } from "../axis/AxisViews"
 import { NoDataModal } from "../noDataModal/NoDataModal"
 import { AxisConfig } from "../axis/AxisConfig"
@@ -53,7 +51,7 @@ import {
     ColorScaleConfig,
     ColorScaleConfigDefaults,
 } from "../color/ColorScaleConfig"
-import { ColorSchemeName, OwidNoDataGray } from "../color/ColorConstants"
+import { OwidNoDataGray } from "../color/ColorConstants"
 import { color } from "d3-color"
 import { SelectionArray } from "../selection/SelectionArray"
 import { ColorScheme } from "../color/ColorScheme"

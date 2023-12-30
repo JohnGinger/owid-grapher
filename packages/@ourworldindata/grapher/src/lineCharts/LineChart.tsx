@@ -42,13 +42,15 @@ import { Tooltip, TooltipState, TooltipTable } from "../tooltip/Tooltip"
 import { NoDataModal } from "../noDataModal/NoDataModal"
 import { extent } from "d3-array"
 import {
-    BASE_FONT_SIZE,
     SeriesName,
     ScaleType,
     SeriesStrategy,
     FacetStrategy,
     MissingDataStrategy,
-} from "../core/GrapherConstants"
+    ColorScaleConfigInterface,
+    ColorSchemeName,
+} from "@ourworldindata/types"
+import { BASE_FONT_SIZE } from "../core/GrapherConstants"
 import { ColorSchemes } from "../color/ColorSchemes"
 import { AxisConfig, FontSizeManager } from "../axis/AxisConfig"
 import { ChartInterface } from "../chart/ChartInterface"
@@ -80,11 +82,8 @@ import { ColorScheme } from "../color/ColorScheme"
 import { SelectionArray } from "../selection/SelectionArray"
 import { CategoricalBin, ColorScaleBin } from "../color/ColorScaleBin"
 import { ColorScale, ColorScaleManager } from "../color/ColorScale"
-import {
-    ColorScaleConfig,
-    ColorScaleConfigInterface,
-} from "../color/ColorScaleConfig"
-import { ColorSchemeName, OwidNoDataGray } from "../color/ColorConstants"
+import { ColorScaleConfig } from "../color/ColorScaleConfig"
+import { OwidNoDataGray } from "../color/ColorConstants"
 import { MultiColorPolyline } from "../scatterCharts/MultiColorPolyline"
 import { CategoricalColorAssigner } from "../color/CategoricalColorAssigner"
 import { darkenColorForLine } from "../color/ColorUtils"

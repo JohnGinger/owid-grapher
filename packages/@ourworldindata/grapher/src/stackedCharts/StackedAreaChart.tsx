@@ -14,7 +14,7 @@ import {
     lastOfNonEmptyArray,
 } from "@ourworldindata/utils"
 import { computed, action, observable } from "mobx"
-import { SeriesName } from "../core/GrapherConstants"
+import { SeriesName } from "@ourworldindata/types"
 import { observer } from "mobx-react"
 import { DualAxisComponent } from "../axis/AxisViews"
 import { DualAxis } from "../axis/Axis"

@@ -94,13 +94,16 @@ import {
     EntityName,
     OwidColumnDef,
     OwidVariableRow,
-    BlankOwidTable,
-    OwidTable,
-    ColumnTypeMap,
-    CoreColumn,
+
     ColorSchemeName,
     AxisConfigInterface,
 } from "@ourworldindata/types"
+import {
+BlankOwidTable,
+    OwidTable,
+    ColumnTypeMap,
+    CoreColumn,
+} from "@ourworldindata/core-table"
 import {
     BASE_FONT_SIZE,
     CookieKey,

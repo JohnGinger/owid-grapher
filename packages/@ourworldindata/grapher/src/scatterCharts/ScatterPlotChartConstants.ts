@@ -1,12 +1,6 @@
 import { ScaleLinear } from "d3-scale"
 import { Quadtree } from "d3-quadtree"
-import {
-    Color,
-    Time,
-    EntityId,
-    EntityName,
-    OwidTable,
-} from "@ourworldindata/core-table"
+import { OwidTable } from "@ourworldindata/core-table"
 import { DualAxis } from "../axis/Axis"
 import { ChartManager } from "../chart/ChartManager"
 import { NoDataModalManager } from "../noDataModal/NoDataModal"
@@ -15,7 +9,11 @@ import {
     ScatterPointLabelStrategy,
     EntitySelectionMode,
     SeriesName,
-} from "../core/GrapherConstants"
+    Color,
+    Time,
+    EntityId,
+    EntityName,
+} from "@ourworldindata/types"
 
 import { Bounds, PointVector } from "@ourworldindata/utils"
 import { ChartSeries } from "../chart/ChartInterface"

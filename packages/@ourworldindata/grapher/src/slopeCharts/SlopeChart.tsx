@@ -25,12 +25,13 @@ import {
     VerticalColorLegendManager,
 } from "../verticalColorLegend/VerticalColorLegend"
 import { ColorScale, ColorScaleManager } from "../color/ColorScale"
+import { BASE_FONT_SIZE } from "../core/GrapherConstants"
 import {
-    BASE_FONT_SIZE,
     ScaleType,
     EntitySelectionMode,
     SeriesName,
-} from "../core/GrapherConstants"
+    ColorSchemeName,
+} from "@ourworldindata/types"
 import { ChartInterface } from "../chart/ChartInterface"
 import { ChartManager } from "../chart/ChartManager"
 import { scaleLinear, scaleLog, ScaleLinear, ScaleLogarithmic } from "d3-scale"
@@ -47,7 +48,6 @@ import {
 } from "./SlopeChartConstants"
 import { CoreColumn, OwidTable, Color } from "@ourworldindata/core-table"
 import { autoDetectYColumnSlugs, makeSelectionArray } from "../chart/ChartUtils"
-import { ColorSchemeName } from "../color/ColorConstants"
 import { AxisConfig, FontSizeManager } from "../axis/AxisConfig"
 
 @observer

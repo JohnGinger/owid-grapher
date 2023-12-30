@@ -21,11 +21,8 @@ import {
 } from "@ourworldindata/utils"
 import { action, computed, observable } from "mobx"
 import { observer } from "mobx-react"
-import {
-    BASE_FONT_SIZE,
-    FacetStrategy,
-    SeriesName,
-} from "../core/GrapherConstants"
+import { FacetStrategy, SeriesName } from "@ourworldindata/types"
+import { BASE_FONT_SIZE } from "../core/GrapherConstants"
 import {
     HorizontalAxisComponent,
     HorizontalAxisGridLines,

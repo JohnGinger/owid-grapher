@@ -12,7 +12,7 @@ import {
 } from "@ourworldindata/utils"
 import { VerticalAxis, HorizontalAxis, DualAxis } from "./Axis"
 import classNames from "classnames"
-import { ScaleType } from "../core/GrapherConstants"
+import { ScaleType } from "@ourworldindata/types"
 
 const dasharrayFromFontSize = (fontSize: number): string => {
     const dashLength = Math.round((fontSize / 16) * 3)
