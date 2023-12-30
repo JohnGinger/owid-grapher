@@ -1,18 +1,4 @@
-import { TopicId } from "@ourworldindata/utils"
-import { Color } from "@ourworldindata/core-table"
 import type { GrapherProgrammaticInterface } from "./Grapher"
-
-export enum ChartTypeName {
-    LineChart = "LineChart",
-    ScatterPlot = "ScatterPlot",
-    StackedArea = "StackedArea",
-    DiscreteBar = "DiscreteBar",
-    StackedDiscreteBar = "StackedDiscreteBar",
-    SlopeChart = "SlopeChart",
-    StackedBar = "StackedBar",
-    WorldMap = "WorldMap",
-    Marimekko = "Marimekko",
-}
 
 export const GRAPHER_EMBEDDED_FIGURE_ATTR = "data-grapher-src"
 export const GRAPHER_EMBEDDED_FIGURE_CONFIG_ATTR = "data-grapher-config"
@@ -40,83 +26,11 @@ export enum CookieKey {
     isAdmin = "isAdmin",
 }
 
-// We currently have the notion of "modes", where you can either select 1 entity, or select multiple entities, or not change the selection at all.
-// Todo: can we remove?
-export enum EntitySelectionMode {
-    MultipleEntities = "add-country",
-    SingleEntity = "change-country",
-    Disabled = "disabled",
-}
-
-export enum StackMode {
-    absolute = "absolute",
-    relative = "relative",
-}
-
 export const BASE_FONT_SIZE = 16
-
-export enum FacetStrategy {
-    none = "none", // No facets
-    entity = "entity", // One chart for each country/entity
-    metric = "metric", // One chart for each Y column
-}
-
-export enum FacetAxisDomain {
-    independent = "independent", // all facets have their own y domain
-    // TODO: rename to "uniform", since "shared" has a different meaning when
-    // axes are being plotted (it means the axis is omitted).
-    // Need to migrate Grapher & Explorer configs.
-    shared = "shared", // all facets share the same y domain
-}
-
-export enum SeriesStrategy {
-    column = "column", // One line per column
-    entity = "entity", // One line per entity
-}
-
-export enum MissingDataStrategy {
-    auto = "auto", // pick default strategy based on chart type
-    hide = "hide", // hide entities with missing data
-    show = "show", // show entities with missing data
-}
 
 export const ThereWasAProblemLoadingThisChart = `There was a problem loading this chart`
 
-export type SeriesColorMap = Map<SeriesName, Color>
-
-export enum GrapherTabOption {
-    chart = "chart",
-    map = "map",
-    table = "table",
-}
-
-export enum ScaleType {
-    linear = "linear",
-    log = "log",
-}
-
-export interface RelatedQuestionsConfig {
-    text: string
-    url: string
-}
-
-export interface Topic {
-    id: TopicId
-    name: string
-}
-
 export const WorldEntityName = "World"
-
-// When a user hovers over a connected series line in a ScatterPlot we show
-// a label for each point. By default that value will be from the "year" column
-// but by changing this option the column used for the x or y axis could be used instead.
-export enum ScatterPointLabelStrategy {
-    year = "year",
-    x = "x",
-    y = "y",
-}
-
-export type SeriesName = string
 
 export const getVariableDataRoute = (
     dataApiUrl: string,
@@ -145,12 +59,6 @@ export const getVariableMetadataRoute = (
 export enum Patterns {
     noDataPattern = "noDataPattern",
     noDataPatternForMapChart = "noDataPatternForMapChart",
-}
-
-export interface AnnotationFieldsInTitle {
-    entity?: boolean
-    time?: boolean
-    changeInPrefix?: boolean
 }
 
 export const grapherInterfaceWithHiddenControlsOnly: GrapherProgrammaticInterface =

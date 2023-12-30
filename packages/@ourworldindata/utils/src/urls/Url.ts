@@ -3,7 +3,8 @@ import { gdocUrlRegex } from "@ourworldindata/types/src/GdocsConstants.js"
 
 import { excludeUndefined, omitUndefinedValues } from "../Util.js"
 
-import { QueryParams, queryParamsToStr, strToQueryParams } from "./UrlUtils.js"
+import { queryParamsToStr, strToQueryParams } from "./UrlUtils.js"
+import { QueryParams } from "@ourworldindata/types"
 
 const parseUrl = (url: string): urlParseLib<string> => {
     const parsed = urlParseLib(url, {})
