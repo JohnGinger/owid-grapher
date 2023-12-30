@@ -20,7 +20,8 @@ import {
     groupBy,
     extractDetailsFromSyntax,
 } from "@ourworldindata/utils"
-import { Grapher, Topic, GrapherInterface } from "@ourworldindata/grapher"
+import { Topic, GrapherInterface } from "@ourworldindata/types"
+import { Grapher } from "@ourworldindata/grapher"
 import { Admin } from "./Admin.js"
 import {
     ChartEditor,

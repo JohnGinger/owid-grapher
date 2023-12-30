@@ -25,6 +25,7 @@ import {
     SeriesStrategy,
     FacetStrategy,
     ColorScaleConfigInterface,
+    CoreValueType,
     ColorSchemeName,
 } from "@ourworldindata/types"
 import { BASE_FONT_SIZE } from "../core/GrapherConstants"
@@ -45,7 +46,6 @@ import {
 import {
     OwidTable,
     CoreColumn,
-    CoreValueType,
     isNotErrorValue,
 } from "@ourworldindata/core-table"
 import {
